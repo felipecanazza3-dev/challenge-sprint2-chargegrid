@@ -120,11 +120,11 @@ class SistemaChargeGrid:
                 custo_sessao = energia_entregue * tarifa['preco_kwh']
                 self.historico_faturamento += custo_sessao
 
-                print(f"⚡ Estação #{e.id_estacao} recarregou {energia_entregue:.2f} kWh no {carro.modelo}.")
-                print(f"💵 Custo parcial da sessão: R${custo_sessao:.2f} | Carga Atual: {carro.carga_atual:.1f}%")
+                print(f" Estação #{e.id_estacao} recarregou {energia_entregue:.2f} kWh no {carro.modelo}.")
+                print(f" Custo parcial da sessão: R${custo_sessao:.2f} | Carga Atual: {carro.carga_atual:.1f}%")
 
                 if carro.carga_atual >= 100.0:
-                    print(f"🔋 {carro.modelo} totalmente carregado! Liberando vaga.")
+                    print(f" {carro.modelo} totalmente carregado! Liberando vaga.")
                     e.liberar_estacao()
 
 
